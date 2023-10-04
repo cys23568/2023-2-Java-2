@@ -14,6 +14,7 @@ public class RanodmValMission2 {
             }
         }
         System.out.println("끝");
+        System.out.println("끝");
 
     }
 }
