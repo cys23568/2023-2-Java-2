@@ -7,12 +7,12 @@ public class ArrayEx6 {
         int max = score[0];//79
         int min = score[0];//79
 
-        for (int i = 1; i < score.length; i++) {
+        for (int i = 1; i < score.length; i++) { //score 길이만큼 반복
             if (score[i] > max) { //스코어 값이 크면 
-                max = score[i]; //저장
+                max = score[i]; //맥스 저장
             }
             if (score[i] < min) { //작으면
-                min = score[i]; // 저장
+                min = score[i]; //민 저장
             }
         }
         System.out.println(max);//출력

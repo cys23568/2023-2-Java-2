@@ -16,7 +16,11 @@ public class ArrayEX2 {
         for (int i = 0; i <= a.length-1; i++) {
             b = (int)(Math.random() *10) + 1;
             a[i] = b;
-            System.out.print(a[i]);
+            System.out.println("a["+i+"]" + a[i]);
+        }
+        System.out.println("-----------------------------------------");
+        for (int i = 0; i < a.length; i++) {
+            System.out.printf("a[%d]: %d\n",i,a[i]);
         }
         System.out.println();
 
@@ -27,7 +31,7 @@ public class ArrayEX2 {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) (Math.random() * 10) + 1; //arr 배열 랜덤숫자 들어감
             for (int j = 0; j < i; j++) { //0일때 무시
-                if (arr[i] == arr[j]) {
+                if (arr[i] == arr[j]) { // 중복된 값이 있으면 바깥 for i 값을 되돌려서 반복
                     i--;
                 }
             }
@@ -37,6 +41,10 @@ public class ArrayEX2 {
             System.out.println(arr[j]);
         }
         System.out.println("------------------------------");
-        System.out.println(Arrays.toString(arr)); //배열 다출력
+        int [] arr2 =arr;
+        System.out.println("arr :" + arr); //
+        System.out.println("arr2 :" + arr2); // 위 아래 같은 주소 값
+        System.out.println(arr.toString());  //
+        System.out.println(Arrays.toString(arr)); //배열 다 출력
     }
 }

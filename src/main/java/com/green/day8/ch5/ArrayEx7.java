@@ -30,6 +30,22 @@ public class ArrayEx7 {
         for (int i = 0; i < numArr.length; i++) {
             System.out.print(numArr[i]);
         }
+        System.out.println();
+
         System.out.println("--------------------------------------------------");
+        System.out.println("--------------------------------------------------");
+        System.out.println("--------------------------------------------------");
+
+        //int [] numArr = new int[10];
+        for (int i = 0; i < numArr.length; i++) {
+            //0~9
+            int ridx =(int)(Math.random() * numArr.length); //0~9 랜덤 값
+            if (i == ridx) {continue;} // 같은 숫자가 나오면 아래 셔플이 실행이 안댐
+            // 셔플
+            int tmp = numArr[i];
+            numArr[i] =numArr[ridx];
+            numArr[ridx] = tmp;
+        }
+        System.out.println(Arrays.toString(numArr));
     }
 }
