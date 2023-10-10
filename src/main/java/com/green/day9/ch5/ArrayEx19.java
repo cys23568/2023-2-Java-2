@@ -13,16 +13,16 @@ public class ArrayEx19 {
 
         System.out.println("번호\t국어\t영어\t수학\t총점\t평균");
         System.out.println("----------------------------------");
-        for (int i = 0; i < score.length; i++) {
-            System.out.printf("%d", i + 1);
-            int sum = 0;
-            for (int z = 0; z < score[i].length; z++) {
-                int val = score[i][z];
-                sumArr[z] += val;
-                sum += val;
+        for (int i = 0; i < score.length; i++) { // 5번
+            System.out.printf("%d", i + 1); //세로
+            int sum = 0; // 반복문을 통해 초기화
+            for (int z = 0; z < score[i].length; z++) { // 3번
+                int val = score[i][z]; //
+                sumArr[z] = sumArr[z] + val;  //{101, 102, 103} sumArr[z]= score[0][1]+score[0][2]+score[0][3]+
+                sum += val; // 총점 
                 System.out.printf("\t%d", val);
             }
-            float avg = (float) sum / score[i].length;
+            float avg = (float) sum / score[i].length; //평균값
             System.out.printf("\t%d\t%.1f\n", sum, avg);
         }
         System.out.println("----------------------------------");
@@ -31,6 +31,7 @@ public class ArrayEx19 {
             System.out.printf("\t%d", val);
         }
         System.out.println();
+
     }
 }
 

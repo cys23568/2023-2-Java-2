@@ -20,12 +20,31 @@ public class ArrayEx11 {
         for (int i = 0; i <numArr.length; i++) {
                 cntArr[numArr[i]]++; // cnt 0 0 0 0 0 0 0 0 0 0 numArr 의 값? 을 만나면 cnt 인덱스의 위치 1씩 증가
         }
-
-        System.out.println(" -------------------");
-
+        System.out.println("================================================");
         for (int i = 0; i < numArr.length; i++) {
             System.out.println(i+ "개수" + cntArr[i]);
         }
+        System.out.println("================================================");
+        for (int i = 0; i <LEN ; i++) {
+            int val = numArr[i];
+            cntArr[numArr[i]]++;
+        }
+        System.out.println("================================================");
+        for (int ddd : numArr) { // int ddd 얜 i의 형태 : numArr 출력
+            cntArr[ddd]++; // cntArr i 증가 하면서 numArr 인덱스 값 만나면  1씩증가
+            System.out.print(ddd);
+
+            for (int i : cntArr) {
+                System.out.println("i = " + i);
+                }
+            System.out.println();
+        }
+
+        //System.out.println(Arrays.toString(cntArr));
+
+        System.out.println();
+
+
 
     }
 }

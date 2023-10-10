@@ -3,7 +3,7 @@ package com.green.day9.ch5;
 public class MultiArray {
     public static void main(String[] args) {
         int [][] arr = {
-                { 100, 200 }, //arr[0][0] = 100 arr[0][1] = 200         //정수 배열타입
+                { 100, 200 }, //arr[0][0] = 100 arr[0][1] = 200         //정수 배열타입 레[퍼럿느
                 { 300, 400 }, //arr[1][0] = 300 arr[1][1] = 400
                 { 500, 600 } //arr[2][0] = 500 arr[2][1] = 600
         };
