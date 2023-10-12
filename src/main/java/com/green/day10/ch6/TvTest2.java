@@ -14,8 +14,5 @@ public class TvTest2 {
 
         System.out.printf("tv2.channel: %d\n",tv2.channel); //0
 
-        
-
     }
-
 }

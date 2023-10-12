@@ -12,6 +12,7 @@ public class TvTest {
         tv2.channel = 20;//접근 할때는 주소값. 사용
         //tv1 tv2 주소값 다름
 
+        System.out.println("tv1 == tv2 >>" + (tv1 == tv2)); //false 주소값이 다름
         System.out.println("tv1.channl :" +tv1.channel);  // 10
         System.out.println("tv1.channl :" +tv1.color);  // red
         System.out.println("tv1.channl :" +tv1.power); // true

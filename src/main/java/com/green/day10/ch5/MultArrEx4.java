@@ -31,7 +31,7 @@ public class MultArrEx4 {
             String[] wordArr = words[i];
             System.out.printf("Q%d. %s의 뜻은? >>", i + 1, wordArr[0]);
             String answer = scanner.nextLine();
-            String exp =wordArr[1];
+            String exp = wordArr[1];
             /*if (answer.equals(wordArr[1])) {//정답
                 System.out.println("정답입니다");
             }else {
@@ -49,7 +49,9 @@ public class MultArrEx4 {
             System.out.println(answer.equals(wordArr[1]) ? "정답입니다" :"오답입니다 정답은 " + wordArr[1]);
         }
         System.out.println("=======================================");
+
         int i = 1;
+
         for (String [] wodArr : words) {
             System.out.printf("Q%d. %s의 뜻은 ?",i++,wodArr[0]);
             String answer = scanner.nextLine();
