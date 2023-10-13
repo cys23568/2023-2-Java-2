@@ -27,6 +27,8 @@ public class Tv {
     void channelUp () { channel++; } // {channel++} 구현부
     void channelDown () { channel--; }
 
+    //void 아니면 ㄷ ㅏ리턴 리턴필요함
+    //void 리턴 사용ㄱ라능ㅎ나데 쓸모없음
 
 
 }
