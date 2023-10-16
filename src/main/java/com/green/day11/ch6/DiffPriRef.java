@@ -1,30 +1,8 @@
 package com.green.day11.ch6;
 
 public class DiffPriRef {
-    public static void main(String[] args) {
-        int num = 30;
-        changeVal(num); //메소드를 호출 값을 복사해서 줌 공간 달라서 영향 x 서로 땨ㅏ로놈
-        System.out.println("num : " + num);
-        NumBox nb = new NumBox(); // 이건 객체를 만듬 그래서 주소값이 생김 객체한ㅌ ㅔ접근 할 수 있는 정보
-        System.out.println("1nb.num :" +nb.num); //접근을 해서 값을 가져옴
-        nb.num = 30; //num 공간에 30대입 복사하여준다
-        System.out.println("2nb.num :" +nb.num);
-        changeVal(nb); // 메소드 호출 / 호출이 끝나면 죽는다
-        System.out.println("3nb.num :" +nb.num);
-    }
-    public static void changeVal(int num) {
-        System.out.println("changeVal - int");
-        num = 10;
-    }
-    public static void changeVal(NumBox nb2) {
-        System.out.println("changeVal - NumBox");
-        nb2.num = 10;
-    }
-}
-class NumBox{
-    int num;
-}
-    /*public static void main(String[] args) { //다른곳의 메소드를 쓰고 싶으면 객체 생성을 먼저 해주면 된다
+
+    public static void main(String[] args) { //다른곳의 메소드를 쓰고 싶으면 객체 생성을 먼저 해주면 된다
         //static이 있다면 따로 안해도 되지만 static은 static 안의 거만 가져올 수 있다
 
         int num = 30;
@@ -32,7 +10,7 @@ class NumBox{
         System.out.println("num : " +num);
         //num값을 변경시키진 못한다 복사해서 가져간 후 저기서 프린트만 했을 뿐이니깐
 
-        NumBox nb = new NumBox(); //1.NumBox 객체를 생성 NumBox에 접근
+        NumBox nb = new NumBox(); //1.NumBox 객체를 생성 NumBox에 접근  NUmbox 객체의 주소값
         System.out.println("(1)nb.num : "+nb.num); //2.NumBox의 num은 기본값 0이었다
 
         nb.num = 30; //3.그 객체의 num에 30을 대입할거다 바꿔버린다
@@ -51,10 +29,9 @@ class NumBox{
         nb2.num = 10;//6.이때 nb와 같은 주소값을 가지고 있던 nb2가 그 주소에 접근해 num을 10을 바꿔버린다
     }//7. 그리고 이 메소드가 끝나면서 임시로 만든 nb2는 없어진다
 }
-
 class NumBox {
     int num; //기본값 0이 들어있다
-}*/
+}
 
 
 

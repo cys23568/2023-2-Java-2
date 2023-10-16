@@ -17,7 +17,7 @@ public class PrimitiveParamEx {
         System.out.printf("change() : x = %d\n",x);*/
     }
 
-    public  static  void change(Data d) {
+    public  static  void change(Data d) { //오버로딩 같은 객체 여러개 만들  수 있음 기본타입이랑 참조타입 다르면 서로 다르게사용가능
         d = new Data();
         d.x = 1000;
         System.out.printf("change() : x = %d\n",d.x); //1000

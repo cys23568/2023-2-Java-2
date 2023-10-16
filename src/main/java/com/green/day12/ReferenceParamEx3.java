@@ -7,13 +7,13 @@ public class ReferenceParamEx3 {
 
 
         int [] arr = {3,2,1,6,5,4};
-        printArr(arr); // 3 2 1 6 5 4
-        sortArr(arr); //같은 공간안에 있
+        printArr(arr); // ok
+        sortArr(arr); // ok
         System.out.println(Arrays.toString(arr));
-        sumArr(arr);
-        System.out.println("sum = " + sumArr(arr));
+        sumArr(arr); //ok
+        System.out.println("sum = " + sumArr(arr)); //flxj리턴타입
     }
-    public  static void sortArr (int [] kk) { //오름차순
+    public  static void sortArr (int [] kk) { //스태틱 지우면 안댐 퍼블릭 지워도댐
         int a = 0;
         for (int i = 0; i < kk.length-1 ; i++) {
             for (int j = 0; j < kk.length-1-i; j++) {
@@ -25,6 +25,7 @@ public class ReferenceParamEx3 {
             }
         }
     }
+    
     public  static void   printArr (int [] kk) {
         System.out.printf("[%d",kk[3]);
         for (int i = 1; i < kk.length ; i++) {
@@ -32,6 +33,8 @@ public class ReferenceParamEx3 {
         }
         System.out.println("]");
     }
+    
+    
     public  static  int sumArr(int [] dd) {
         int d = 0;
         for (int i = 0; i < dd.length; i++) {

@@ -1,10 +1,14 @@
 package com.green.day12;
 
 public class Card {
-    String kind ;
-    String number ;
+    public String kind ;
+    public String number ;
 
-    int getScore () {
+    public void printYourSelf () {
+        System.out.printf("%s(%s)\n",kind,number);
+    }
+
+    public int getScore () {
         switch (number) {
             case "A": return 1;
             case "J": return 11;
