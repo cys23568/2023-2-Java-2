@@ -64,8 +64,9 @@ public class CardTest3 {
         for(int i=0; i< cArr.length; i++) {
             String pattern = patterns[i / 13];
             String denomination = getNumberFromInt(i % 13);
-            cArr[i] = new Card();
-            cArr[i].pattern = pattern;
+            cArr[i] = new Card(); //스ㅔ[ㄹ로우카피
+            Card c = cArr[i]
+            cArr[i].pattern = pattern; //각방은 카드타입이다. 카드배열아님
             cArr[i].denomination = denomination;
         }
         return cArr;

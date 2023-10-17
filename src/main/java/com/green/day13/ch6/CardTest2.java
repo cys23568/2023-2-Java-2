@@ -4,7 +4,7 @@ import com.green.day12.Card;
 
 public class CardTest2 {
     public static void main(String[] args) {
-        Card[] card = makeCard(); //52개의 카드를 들고 있는 배열의 주소 값 리턴
+        Card[] card = makeCard(); //52개의 카드를 들고 있는 배열의 주소 값 리턴 new 없다 그럼 스태틱  파라미터x
         System.out.println(card.length);
         for (Card c : makeCard()) {
             c.printYourSelf(); //
@@ -24,7 +24,7 @@ public class CardTest2 {
                 makeCard[cnt++] = c;
             }
         }
-        return makeCard;
+        return makeCard; //카드타입의 주소값을 리턴
         // spade, heart,diamond,club
         //    //A 2~10 J Q K
         //for (int i = 0; i < makeCard.length/13 ; i++) {

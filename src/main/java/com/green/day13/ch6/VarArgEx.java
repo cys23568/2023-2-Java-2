@@ -1,7 +1,7 @@
 package com.green.day13.ch6;
 
 public class VarArgEx {
-    public static void sum(int...n) { //배열, 가변인자
+    public static void sum(int...n) { //배열이라 가능 for문이랑 잘맞음, 가변인자
 
         int tmp = 0;
         for (int i = 0; i < n.length; i++) {
