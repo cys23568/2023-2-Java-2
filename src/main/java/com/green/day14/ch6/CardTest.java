@@ -14,7 +14,8 @@ public class CardTest {
             Card c = cd.getCard();
             c.printMySelf();
         }
-        System.out.println();
+        System.out.println("-----------");
+        cd.printAll(); // null 호출 에러뜸 왜 why 아까 다바꿈 ,
 
     }
 }

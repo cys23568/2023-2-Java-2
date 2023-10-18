@@ -16,6 +16,7 @@ public class Data1 { //생성자의 용도는 객체를 생성할때 ,생성과 
         value3 = c;
     }
     public void printMySelf() {
+        // this(10,10,10); 안댐 생산자 는 객채를 생성할때만 가능
          Data1 data2 = new Data1();
          data2.value = 100;
          data2.value2 = 200;

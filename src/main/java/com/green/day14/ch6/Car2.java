@@ -1,7 +1,7 @@
 package com.green.day14.ch6;
 
 public class Car2 {
-    String color; //회색빛 의미없음
+    String color; //회색빛 의미없음   순서 1
     String gearType;
     int door;
     public void printMySelf() {

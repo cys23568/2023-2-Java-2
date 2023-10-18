@@ -1,6 +1,6 @@
 package com.green.day14.ch6;
 
-public class Document {
+public class   Document {
    static int cnt = 0; //증감식 이용
     String name = "문서 제목없음";
     public Document() {
@@ -10,9 +10,6 @@ public class Document {
         this.name = name;
         System.out.printf("문서 %s가 생성되었습니다.\n",this.name);
     }
-
-
-
 }
 class DocumentTest {
     public static void main(String[] args) {

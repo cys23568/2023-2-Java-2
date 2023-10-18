@@ -3,8 +3,12 @@ package com.green.day14.ch6;
 public class CardDeck {
     Card[] cards; // 전역변수는 여기에 왜 why 계속 써야함 카드배열의 주소값
 
+
+
     public CardDeck() { //지역변수 호출이 끝나면 죽음
-        cards = new Card[52];
+
+        cards = new Card[52]; //계속 사용 할 수있따. 전역변수에서 선언했기때문
+
         String[] patterns = {"Spade", "Heart", "Diamond", "Club"};
         int idx = 0;
         for (int i = 0; i < patterns.length; i++) {
@@ -39,13 +43,16 @@ public class CardDeck {
             d.printMySelf();
         }*/
     public Card getCard() {
+
         Card c = null;
-        while (true) {
+        //c.printMySelf();
+
+        while (true) { //ㅁ 한반복
             int r = (int) (Math.random()* cards.length);
             c = cards[r];
-            if (c != null) {
-                cards[r] = null;
-                break;
+            if (c != null) {//c값의 null이아니면 멈춤
+                cards[r] = null;  //
+                break; //필요
             }
         }
         return c;

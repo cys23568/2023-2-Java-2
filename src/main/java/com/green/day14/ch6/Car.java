@@ -21,10 +21,10 @@ public class Car {
         this.color = color;
         this.gearType = gearType;
         this.door = door;
-    }
+    } //this (생성자 호출)
     public void printMySelf() {
         System.out.println(color+gearType+door);
-    }
+    } //오버로딩 이름만같음 타입만다르면 가능
 }
 class CarTest {
     public static void main(String[] args) {

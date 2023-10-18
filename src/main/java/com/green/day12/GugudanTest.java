@@ -11,9 +11,6 @@ public class GugudanTest {
         System.out.println("=============================");
         gugudan.parintFromTo(3,6, "-------");
 
-
-
-
     }
 
 }
