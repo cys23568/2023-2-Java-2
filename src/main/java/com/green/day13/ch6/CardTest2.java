@@ -31,7 +31,7 @@ public class CardTest2 {
         //    for (int j = 0; j < makeCard.length/4; j++) {
         //        makeCard[j] =
 
-        //    }
+        //
             }
         public static String getNumberFromInt ( int j){
             switch (j) {

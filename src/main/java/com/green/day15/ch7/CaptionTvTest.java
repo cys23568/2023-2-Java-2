@@ -1,8 +1,8 @@
 package com.green.day15.ch7;
 class Tv {
-    boolean power;
+    boolean power; //속성 ,전역변수 객체죽을때낒;사용
     int channel;
-    void power() {power = !power;} //실행할때마다 값이 바뀐다.
+    void power() {power = !power;} //메소드,실행할때마다 값이 바뀐다. 토글이라고함 반대값
     void channelUp() { channel++;}
     void channelDown() { channel--;}
 }
@@ -13,8 +13,8 @@ class CaptionTv extends Tv{
     //    void channelUp() { channel++;}
     //    void channelDown() { channel--;}
     //
-    boolean caption;
-    void displayCaption(String text) {
+    boolean caption; //속성
+    void displayCaption(String text) { //메소드
         if (caption) {
             System.out.println(text);
         }

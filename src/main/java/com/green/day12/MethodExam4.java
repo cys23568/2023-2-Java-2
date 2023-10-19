@@ -1,7 +1,6 @@
 package com.green.day12;
 
 import java.util.Arrays;
-
 public class MethodExam4 {
     int [] plusmap (int [] arr,int n1) {
         int [] dd = new int[arr.length];
@@ -19,7 +18,6 @@ public class MethodExam4 {
     }
     int [] plusmapValFromTo(int n1, int n2 , int n3) {
         int [] d = new int [n1];
-
         for (int i = 0; i < d.length; i++) {
             d[i] = (int) (Math.random() * (n3-n2+1)) + n2;
         }
@@ -27,10 +25,9 @@ public class MethodExam4 {
     }
     public static void main(String[] args) {
         MethodExam4 me4 = new MethodExam4();
-
         int [] arr = {10 , 20, 30};
         int [] rArr1 = me4.plusmap(arr,2);
-        System.out.println(Arrays.toString(arr)); // [10 ,20 ,30
+        System.out.println(Arrays.toString(arr)); // 10 ,20 ,30
         System.out.println(Arrays.toString(rArr1)); //12 22 32
 
         me4.plusmap0rigin(arr,4); // 14 , 24 , 34

@@ -21,7 +21,5 @@ public class MethodExam3 { //클래스 단위로만 객체
         int sum = m3.sumTest("123123");
         System.out.println("sum :" + sum); //12
         System.out.println("sum2 :" + m3.sumTest("222")); //6
-
-
     }
 }

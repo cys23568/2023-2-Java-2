@@ -12,7 +12,7 @@ public class ReferenceParamEx {
         d.d = 100.5;
 
         Data2 d2 = copyObj(d);
-        System.out.println("d == d2 :" +(d == d2)); //false
+        System.out.println("d == d2 :" +(d == d2)); //false              주소값 다름
         System.out.println("d.x == d2.x " + (d.x == d2.x)); //ture
         System.out.printf("d.d == d2.d " + (d.d == d2.d)); //true
     }
@@ -23,5 +23,4 @@ public class ReferenceParamEx {
         d.d = a.d;
         return a;
     }
-
 }

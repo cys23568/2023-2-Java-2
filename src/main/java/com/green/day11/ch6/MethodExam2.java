@@ -48,7 +48,6 @@ public class MethodExam2 {
             case 1:
             case 2:
                 return "겨울";
-
         }
         if (n1 < 0 || n1 < 12) {
             return "없음";

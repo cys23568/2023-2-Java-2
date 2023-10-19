@@ -4,8 +4,6 @@ import java.util.Arrays;
 
 public class ReferenceParamEx3 {
     public static void main(String[] args) {
-
-
         int [] arr = {3,2,1,6,5,4};
         printArr(arr); // ok
         sortArr(arr); // ok
@@ -25,17 +23,14 @@ public class ReferenceParamEx3 {
             }
         }
     }
-    
-    public  static void   printArr (int [] kk) {
-        System.out.printf("[%d",kk[3]);
+    public static void printArr (int [] kk) {
+        System.out.printf("[%d",kk[0]);
         for (int i = 1; i < kk.length ; i++) {
             System.out.printf("%d",kk[i]);
         }
         System.out.println("]");
     }
-    
-    
-    public  static  int sumArr(int [] dd) {
+    public static int sumArr(int [] dd) {
         int d = 0;
         for (int i = 0; i < dd.length; i++) {
             d += dd[i];

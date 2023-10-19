@@ -3,11 +3,9 @@ package com.green.day12;
 public class Card {
     public String kind ;
     public String number ;
-
     public void printYourSelf () {
         System.out.printf("%s(%s)\n",kind,number);
     }
-
     public int getScore () {
         switch (number) {
             case "A": return 1;

@@ -6,7 +6,7 @@ class Tv2 {
     void channelUp() { channel++;} //3.호출
     void channelDown() { channel--;}
 }
-class CaptionTv2 extends Tv2 {
+class CaptionTv2 extends Tv2 { //위에꺼 상속받음
     //    boolean power; 생략
     //    int channel; 생략
     // void power() {power = !power;} //실행할때마다 값이 바뀐다.
@@ -19,7 +19,8 @@ class CaptionTv2 extends Tv2 {
             System.out.println(text);
         }
     }
-    void channelUp() { //오버라이딩 , @override 빨간 줄이 아니라면 오버라이딩맞음 부모랑 이름과 파라미터 같아야함
+    @Override //오버라이딩 확인하는거
+    void channelUp() { //오버라이딩 , @Override 빨간 줄이 아니라면 오버라이딩맞음 부모랑 이름과 파라미터 같아야함
                       //부모꺼 안쓰고 새롭게 정의 하겠다는거
         channel += 2;
     }
