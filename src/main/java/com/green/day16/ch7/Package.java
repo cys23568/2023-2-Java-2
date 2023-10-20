@@ -3,7 +3,7 @@ package com.green.day16.ch7;
 import com.green.day13.ch6.MyMath2;
 import com.green.day15.ch7.*; //이렇게 하면 ch7 안에 있는거 다 임포트해버림 *는 와이드 카드라고 한다.
 //import com.green.day15.ch7.Parent;  >> Parent 이것만 임포트
-//import static com.green.day13.ch6.MyMath2.staticAbs;
+//import static com.green.day13.ch6.MyMath2.staticAbs; ,대문자.소문자 = 스태틱이라는걸 알 수 ㄱ ㅏ잇다
 
 public class Package {
     //final  클래스 앞에 가능 하면 상속안댐

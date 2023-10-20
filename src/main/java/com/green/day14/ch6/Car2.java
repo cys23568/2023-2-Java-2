@@ -16,14 +16,13 @@ public class Car2 {
 }
 class Car2Test {
     public static void main(String[] args) {
-        
-       /* Car2 c1 = new Car2();
-        c1.color = "black";
+        Car2 c1 = new Car2();
+        c1.color = "red"; //접근해서 값 변경
         c1.gearType = "manual";
-        c1.door = 4;
+        c1.door = 5;
 
         Car2 c2 = new Car2(c1);
         c1.printMySelf(); //black manual 5
-        c2.printMySelf(); //black manual 5*/
+        c2.printMySelf(); //black manual 4 값 변경안댐
     }
 }

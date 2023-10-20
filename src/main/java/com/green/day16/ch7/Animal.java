@@ -3,6 +3,9 @@ package com.green.day16.ch7;
 import com.green.day15.ch7.DeckTest2;
 
 import java.util.concurrent.atomic.DoubleAccumulator;
+//다형성 : 상속관계에서만 나타나는 형상 , 어떠한 객체 주소값을 다른 타입이 주소값을 저장 , 부모타입은 자식 타입의 주소값을 담을 수 있고 반대는 안댄다.
+//호출이 된다면 객체기준으로 해당되는 메소드 실행 (오버라이딩 왜 why 부모도 알고 자식도 알고있으면새롭게 재정의)
+
 
 public class Animal {
     public void crying() {
@@ -62,10 +65,10 @@ class AnimalTest2{
         callCrying(cat);
         callCrying(bulldog);
     }
-    private static void callCrying(Animal ani) { //다형성 이라고한다, 코드 엄청 줄여버림
+    private static void callCrying(Animal ani) { //다향성 이라고한다, 코드 엄청 줄여버림
 
         ani.crying();
-        if (ani instanceof Bulldog) {  //true 실행
+        if (ani instanceof Bulldog) {  //true 실행 왼쪽은 변수명 ㅇ른쪽은 클래스명
             Bulldog bulldog = (Bulldog) ani; //강제 형변환해서 불독으로만듬
             bulldog.jump(); //불독 점프 출력
         }

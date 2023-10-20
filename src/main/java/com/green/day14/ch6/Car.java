@@ -33,6 +33,5 @@ class CarTest {
 
         car1.printMySelf(); //color = white , gearType= auto door4
         car2.printMySelf();
-
     }
 }

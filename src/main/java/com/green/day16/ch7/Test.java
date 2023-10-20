@@ -1,5 +1,5 @@
 package com.green.day16.ch7;
-
+//dlst인스턴스변수 사용하지않늗나면 스태틱 가능
 public class Test {
     int num;
     public static void sum(int n1, int n2) {  //스태틱 안붙으내 쓰고 싶으면 객체화부터해라

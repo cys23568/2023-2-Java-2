@@ -28,6 +28,7 @@ public class Time {
         this.hour = hour;
 
     }
+    //set  보이드
     public void setMinute(int minute) {
         this.minute = minute; //minute 메소드의 sethour 메서드
     }
@@ -35,9 +36,10 @@ public class Time {
         this.second = second; //second 메소드의 sethour 메서드
     }
 
+    //get = 값 빼내는거
     public int getHour() {
         return this.hour;
-    }
+    } // 리턴타입은 변수으 ㅣ타입 이름이다.
     public int getMinute() {
         return this.minute;
     }
