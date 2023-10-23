@@ -68,7 +68,9 @@ class AnimalTest2{
     private static void callCrying(Animal ani) { //다향성 이라고한다, 코드 엄청 줄여버림
 
         ani.crying();
-        if (ani instanceof Bulldog) {  //true 실행 왼쪽은 변수명 ㅇ른쪽은 클래스명
+        if (ani instanceof Bulldog) {  //true 실행 왼쪽은 주소값(Animal타입)
+                                       //
+                                         // ㅇ른쪽은 클래스명 t상속관계라 가능 모르는 사이면 안댐
             Bulldog bulldog = (Bulldog) ani; //강제 형변환해서 불독으로만듬
             bulldog.jump(); //불독 점프 출력
         }

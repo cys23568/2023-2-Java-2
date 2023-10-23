@@ -23,7 +23,7 @@ class PolyArgumentTest2 {
 
         buyer.buy(new Tv());
         System.out.println(buyer);
-        buyer.buy(new Computer());
+        buyer.buy(new Computer()); //티비랑 ㅓㅋㅁ퓨터는 프로덕터를 상석속ㅂ다앗다.
         System.out.println(buyer);
         buyer.buy(new Computer());
         buyer.buy(new Computer());
@@ -52,7 +52,7 @@ class Buyer {
     }
 
     // !!! 다형성.
-    public void buy(Product product) {
+    public void buy(Product product) { //부모타입
 //        if (this.money - product.getPrice() < 0) {
         if (this.money < product.getPrice()) {
             System.out.println("잔액 부족");
@@ -80,43 +80,40 @@ class Buyer {
 }
 
 // 상속과 계층
-class Product {
-    private int price;
+class Product { //상속받는거 없는것처럼 보이지만 자동으로 오브젝트를 상속받았다 왜 why 그렇게 만들었으니깐
+    private int price; //값 넣는 방범 1. 생성자> 초기화 2.setter 메소드 통해 대입
+                        // 값 빼는 방법 getter
     private int bonusPoint;
     protected String kind;
 
-    public Product(int price) {
+    public Product(int price) { //객체 생성할때 딱 한번만 호출이 가능하다 생성자는 그래ㅓㅅ 특별하다고하네요 // 아래 set ㅇㅄ는 이유는 값 변경을 막기위해
         this.price = price;
 //        this.bonusPoint = price / 10;
         this.bonusPoint = (int) (price * 0.1);
     }
-
     public String getKind() {
         return this.kind;
-    }
+    } //외부던짐
 
     public int getPrice() {
         return this.price;
-    }
+    } //외부던짐
 
     public int getBonusPoint() {
         return this.bonusPoint;
-    }
+    } //외부던짐
 
     @Override
     public String toString() {
         return String.format("price: %d, bonusPoint: %d",
                 this.price, this.bonusPoint);
     }
-
 }
-
 class Tv extends Product {
-    public Tv() {
+    public Tv() { //생성자 호출핼슨ㄷ 빨간줄 뜨면 없거나 받는게 없어서 그럼 그럼 없는걸 만들어주거나 받는걸 만들어 주거나 있는걸 사용하면댄다.
         super(100);
         this.kind = "Tv";
     }
-
     @Override
     public String toString() {
         return this.kind;
@@ -128,7 +125,6 @@ class Computer extends Product {
         super(200);
         this.kind = "Computer";
     }
-
     @Override
     public String toString() {
         return this.kind;
