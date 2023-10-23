@@ -1,4 +1,9 @@
-package com.green.day17.ch7;
+/*package com.green.day17.ch7;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 public class PolyArgumentTestVer2 {
     public static void main(String[] args) {
@@ -68,6 +73,16 @@ class PolyArgumentTestVer2_3 {
         buyer2.summary();
     }
 }
+class PolyArgumentTestVer2_4{
+    public static void main(String[] args) {
+        Buyer3 buyer3 = new Buyer3();
+        buyer3.buy(new Computer2());
+        buyer3.buy(new Computer2());
+        buyer3.buy(new Computer2());
+        buyer3.buy(new Audio2());
+        buyer3.summary();
+    }
+}
 class Buyer2 {
     //miney 정ㅅ ㅜ저장가능
     //point (정수) 저장가능
@@ -104,3 +119,61 @@ class Buyer2 {
         System.out.printf("총 물품의 금액%d\n", sum);
         }
 }
+
+class Buyer3 {
+    //miney 정ㅅ ㅜ저장가능
+    //point (정수) 저장가능
+    //product2 객체의 주소값 여러개 저장가능
+    private int money;
+    private int bonusPoint;
+    private Product2 [] ProductArr ; //
+    private int i;
+    private  int sum = 0;
+    
+    private Map<String, Integer> buyItems; //키값문자 뒤에 정수
+
+   
+    public Buyer3 () {
+        buyItems = new HashMap();
+        this.money = 3500;
+        this.bonusPoint = 0;
+        ProductArr = new Product2[10];
+    }
+    public void buy ( Product2 product2) {
+        if (i == ProductArr.length) {
+            System.out.println("구매가 불가능"); //if 문 두번쓰는게 더좋다
+            return;
+        }
+        if (money< product2.getPrice()) {
+            System.out.println("금액이 부족합니다");
+            return;
+        }
+        money -= product2.getPrice();
+        bonusPoint += product2.getBonusPoint();
+        ProductArr[i++] = product2;
+        String produntName = product2.getName();
+        if (!buyItems.containsKey(produntName)) {
+            buyItems.put(produntName,1);
+        } else {
+            buyItems.put("productName", buyItems.get("productName") + 1);
+        }
+        System.out.printf("%s을 (를) 구매 하였습니다.\n",produntName);
+
+        System.out.printf("%s을 구매하셨습니다.\n",product2.getName());
+        sum += product2.getPrice();
+        System.out.printf("[%s] [%d] [%d]\n", product2.getName(), money, bonusPoint);
+
+        Set<String> nameSet = buyItems.keySet();
+        Iterator<String> iterato = nameSet.iterator(); //<String> 안해주면 오브젝트 타입으로 들어간다.
+        while (iterato.hasNext()) {
+            String key = (String)iterato.next();
+            int cnt = buyItems.get(key);
+            System.out.printf("%s : %d대",key,cnt);
+        }
+    }
+
+    public void summary () {
+        System.out.printf("총 물품의 금액%d\n", sum);
+
+    }
+}*/
