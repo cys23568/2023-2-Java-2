@@ -30,6 +30,5 @@ public class FlowEx6 {
             default:
                 System.out.println("업서요");
         }
-
     }
 }

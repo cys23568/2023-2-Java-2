@@ -7,7 +7,6 @@ public class Abs {
 
         num1 = num;
 
-
         //10은 절대값 10
         //-9는(은) 절대값 9
         if (num >= 0) {
@@ -19,8 +18,6 @@ public class Abs {
         System.out.println("-----------------------------");
 
         System.out.printf("%d의 절대값은 절대값 %d\n",num,num < 0 ? -num : num); // ?
-
-
 
     }
 }

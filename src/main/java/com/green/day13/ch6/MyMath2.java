@@ -10,6 +10,7 @@ public class MyMath2 {
    static void print() { //
        //System.out.printf("staticNum : %d num: %d\n",staticNum,num); //num 사용 할 수 없다.스ㅐ틱이 붙은 친구는 이미 메모리에 올라감
    }
+
    void print2() { //인스턴스에서는 스태틱 호출 가능한대 반대는 안댐 왜 why 스태틱은 이미올라갓는데 우에 호출
        System.out.printf("staticNum : %d , num : %d\n",staticNum,num); //사용 가능함 static 객체화 안해도 이미 올라가있음 ,같은 공간에 있으면 객체 생략가능
    }

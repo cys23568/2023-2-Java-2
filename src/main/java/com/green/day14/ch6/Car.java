@@ -9,7 +9,7 @@ public class Car {
 
     //
     public Car(String b) {
-        this("kk","atue",4);
+        this("kk","aute",4); // 밑에 두번째 있는거 호출 오버라이딩? 그거
        /* gearType = "auto";
         door = 4;
         color = b;*/
