@@ -18,6 +18,7 @@ public abstract class Player {//추상 클래스는 자식 메소드 중에 추�
                               // 객체화는안댄다 하지만 상속받은 자식들은 완성시키고 객체화가 가능
                               // 부모로써 활동한다 = 상속가능.
                               // 오버라이딩 강제성이 있다.
+                              // 다중상속이 안댐 중첩댈까바                            
     public abstract void play(int pos); //추상메소드 , 미완성 , 구현부가없는, 선언부만 있음
 }
 class AudoiPlayer extends Player {

@@ -4,14 +4,14 @@ public class ExceptionEx1 {
     public static void main(String[] args) {
         //try ,catch 기본형    finally 얘는 있든ㄷ마륻ㄴ
         int num = 0;
-        try { //예외가 발생되지않으면 쭈웅ㄱ 실행
+        try { //예외가 발생되지않으면 쭈웅ㄱ 실행 // 시작
             num = 10;
             num = num / 0; //일부로 예외 만듬
-        } catch (Exception e) { //예외가 발생하였을때 실행
+        } catch (Exception e) { //예외가 발생하였을때 실행 //중간 걸러내는곳
            // e.printStackTrace();// 에러메시지가 콘솔에 출력
             System.out.println("예외발생");
             num -= 1;
-        } finally { //반드시 실행 무조건 실행
+        } finally { //반드시 실행 무조건 실행  //걸러내든말든 걍 실행
             System.out.println("finally 실행!!!");
         }
         System.out.printf("num : %d\n",num);
@@ -22,14 +22,13 @@ class ExceptionEx1_2 {
     public static void main(String[] args) {
         div(10);
 
-
     }
 
     public static void div(int num) {
         try { //예외가 발생되지않으면 쭈웅ㄱ 실행
             num = 10;
             return;
-        } catch (Exception e) { //예외가 발생하였을때 실행
+        } catch (Exception e) { //예외가 발생하였을때 실행 레퍼런스타입 e : 객체의 주소값
             e.printStackTrace();// 에러메시지가 콘솔에 출력
             System.out.println("예외발생");
             num -= 1;

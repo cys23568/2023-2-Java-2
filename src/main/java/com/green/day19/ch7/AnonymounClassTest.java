@@ -11,11 +11,18 @@ public class AnonymounClassTest {
             }
         };
     }
+
 }
 interface Runnable2 {
-    void run();
+    void run(); //퍼블릭 애스트랩생략
+}
+class BasicRobot {
+    public void run (){
+        System.out.println("로보시 띤다");
+    }
 }
 class RunRobot implements Runnable2 { //클래스가 인터페이스 받을댄 인플러먼스 사용
+    //class RunRobot/Impl/ 클래스이름에 추가 하기도 한다 알기 쉽게 위해서 implements Runnable2
     @Override
     public void run() {
         System.out.println("로봇이 달린다.");

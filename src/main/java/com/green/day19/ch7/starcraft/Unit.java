@@ -15,9 +15,17 @@ class StarcraftGame2 {
        moveAll(units,30,50);
 
        Unit unit1 = units.get(units.size()-1); //마지막 메소드를 가지고있음
-         Tank tank = (Tank)unit1;
+       Unit unit2 = units.get(units.size()-3); //마지막 메소드를 가지고있음 마린
+        Marine marine = (Marine)unit2;
+        marine.steamPack();
+        marine.steamPack();
+        marine.steamPack();
+        marine.steamPack();
+        marine.steamPack();
+
+         /*Tank tank = (Tank)unit1;
          tank.changeMode();
-         tank.changeMode();
+         tank.changeMode();*/
     }
     public static void moveAll ( List<Unit> units, int x, int y) {
         /*for (int i = 0; i <units.size() ; i++) {
@@ -66,7 +74,7 @@ class Marine extends Unit {
     public void move(int x , int y) {
         // this.x = x; 안대는이유 private 라서 상속받아도 안댐
         // super.x = x; 안대는이유 private 라서 상속받아도 안댐
-        this.x =x;
+        this.x = x;
         this.y = y; //이건댐 왜 why 아까 protected 로 바꿈
         //setX(x);//3, 값넣음
         //setY(y);
@@ -80,8 +88,8 @@ class Tank extends Unit {
     private boolean siegeMode;
     @Override
     public void move(int x , int y) {
-        this.x =x;
-        this.y =y;
+        this.x = x;
+        this.y = y;
         System.out.printf("탱크가 좌표로 x:%d , y:%d로 이동\n",x,y);
     }
     //시즈모드가 false는 시즈모드가 아니다.
