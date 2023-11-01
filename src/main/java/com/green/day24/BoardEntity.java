@@ -1,12 +1,18 @@
 package com.green.day24;
 
 public class BoardEntity {
-    private int iboard;
+    private int iboard;  // 이름맞춰주는게 편하다
     private String title;
     private String ctnts;
     private String writer;
     private String createdAt;
     private String updatedAt;
+
+    @Override
+    public String toString(){
+        return String.format("iboard : %d, title : %s, ctnts : %s, writer : %s, createdAt : %s",
+                getIboard(),getTitle(),getCtnts(),getWriter(),getCreatedAt());
+    }
 
     public int getIboard() {
         return iboard;
