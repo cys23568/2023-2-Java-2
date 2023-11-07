@@ -41,7 +41,7 @@ public class ArrayEX2 {
             System.out.println(arr[j]);
         }
         System.out.println("------------------------------");
-        int [] arr2 =arr;
+        int [] arr2 = arr;
         System.out.println("arr :" + arr); //
         System.out.println("arr2 :" + arr2); // 위 아래 같은 주소 값
         System.out.println(arr.toString());  //

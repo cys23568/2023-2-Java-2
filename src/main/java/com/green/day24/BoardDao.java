@@ -8,8 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-// data access object
-public class BoardDao {
+
+public class BoardDao { // data access object
  /*
  Vo : Value Object  set으로 값 빼야함
  Dto : Data Transfer Object 데이터 옮길때 사용
@@ -18,21 +18,22 @@ public class BoardDao {
     public static int insBoard(BoardEntity entity) { // title, ctnts,writer
                                        //값을 여러개 담아서 한번에 ?
         int result = 0;
+        String sql = "INSERT INTO board SET title = ?, ctnts = ?, writer = ?";
        // String sql = String.format("INSERT INTO Board (title, ctnts, writer) " +
        //      "values"  + "('%s', '%s','%s')"
        //,entity.getTitle() , entity.getCtnts() , entity.getWriter());
        // System.out.println(sql);
 
-        String sql = "INSERT INTO Board (title, ctnts, writer) " +
+        /*String sql = "INSERT INTO Board (title, ctnts, writer) " +
                 "values" +
-                "(?,?,?)"; //이거랑 위에 길게한거랑 같음
-        System.out.println(sql);
+                "(?,?,?)"; //이거랑 위에 길게한거랑 같음 문자열에 낵 ㅏ원하는거 넣고싶어서 ????
+        */System.out.println(sql);
         Connection c = null;
         PreparedStatement ps = null;
         try {
             c = MyConn.getConn();
             ps = c.prepareStatement(sql);
-            ps.setString(1, entity.getTitle());
+            ps.setString(1, entity.getTitle()); // 문자열이라 set String
             ps.setString(2, entity.getCtnts());
             ps.setString(3, entity.getWriter());
             result = ps.executeUpdate();
@@ -84,7 +85,7 @@ public class BoardDao {
         }
         return result;
     }
-    public static List<BoardEntity> setBoardList() { // 파라미터 안에 값없으면 다 쓰겟다는 말
+    public static List<BoardEntity> seLBoardList() { // 파라미터 안에 값없으면 다 쓰겟다는 말
         List<BoardEntity> list = new ArrayList();
         Connection con = null;
         PreparedStatement ps = null;
@@ -120,8 +121,9 @@ public class BoardDao {
         return list;
     }
 
-    public static BoardEntity setBoardById(int num) { // 파라미터 안에 값없으면 다 쓰겟다는 말
-        //List<BoardEntity> list = new ArrayList();
+    public static BoardEntity seLBoardById(int num) { // 파라미터 안에 값없으면 다 쓰겟다는 말
+        //List<BoardEntity> list = new ArrayList(); 주소값 하나 리턴 두개 안댐
+        // array list 사용하는 이유는 값 사용할려고
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -132,7 +134,7 @@ public class BoardDao {
             con = MyConn.getConn();
             ps = con.prepareStatement(sql); // 준비
             ps.setInt(1,num); // 첫 번째 ? num 값 넣기
-            rs = ps.executeQuery(); // 전송 마지막에 해줘야함 경우의 수 두가지다 1 혹은 0
+            rs = ps.executeQuery(); // 전송 마지막에 해줘야함 경우의 수 두가지 다 1 혹은 0
             
             /*if (rs.next()) { // 레코드를 가르킴 그리고 가진 수 만큼 실행 / 0개가 넘어올수도있기 때문에 if로해준다
                 int iboard = rs.getInt("iboard");  //첫번째줄
@@ -147,6 +149,7 @@ public class BoardDao {
                 boardEntity.setWriter(writer);
                 boardEntity.setCreatedAt(createdAt);
             }*/
+
             rs.next(); // do while인경우 rs.next()를 먼저 실행
             do {
                 BoardEntity entity = new BoardEntity();
@@ -185,7 +188,7 @@ class MyconnTest2 {
 class MyconnTest3{
     public static void main(String[] args) {
         BoardEntity entity = new BoardEntity();
-        entity.setIboard(2);
+        entity.setIboard(7);
 
         int row = BoardDao.delBoard(entity);
         System.out.println(row);
@@ -199,21 +202,22 @@ class MyconnTest4 {
         entity.setCtnts("가");
         entity.setWriter("부르는 소리");
 
-        int row =BoardDao.updBoard(entity);
+        int row = BoardDao.updBoard(entity);
         System.out.println("row : " + row);
     }
 }
 class MyConnTest5{
     public static void main(String[] args) {
-        List<BoardEntity> list =  BoardDao.setBoardList();
+        List<BoardEntity> list =  BoardDao.seLBoardList();
         for (BoardEntity entity : list) {
             System.out.println(entity);
         }
     }
 }
+
 class MycoonTest6{
     public static void main(String[] args) {
-        BoardEntity result = BoardDao.setBoardById(4);
+        BoardEntity result = BoardDao.seLBoardById(4);
         System.out.println(result);
     }
 }
