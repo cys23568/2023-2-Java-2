@@ -12,7 +12,6 @@ public class exceptionEx9 {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
-
         System.out.println("---끝---");
 
     }

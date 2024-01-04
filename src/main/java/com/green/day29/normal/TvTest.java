@@ -9,6 +9,5 @@ public class TvTest {
         tv1.speak();
         System.out.println("바꿈");
         tv.sound();
-
     }
 }
